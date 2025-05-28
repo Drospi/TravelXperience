@@ -61,4 +61,24 @@ function getFeaturedReservations($id_usuario) {
         return [];
     }
 }
+
+function getFeaturedReservationsAdmin() {
+    global $conn;
+    try {
+        $stmt = mysqli_query($conn, "SELECT * FROM reserva JOIN viaje on reserva.id_viaje = viaje.id_viaje  ");
+        return $stmt;
+    } catch (Exception $e) {
+        return [];
+    }
+}
+
+function createReservation($id_usuario, $id_viaje, $asientos) {
+    global $conn;
+    try {
+        $stmt = mysqli_query($conn, "INSERT INTO reserva (id_viaje, id_usuario, cantidad_asientos) VALUES ($id_viaje, $id_usuario, $asientos)");
+    } catch (Exception $e) {
+        return false;
+    }
+}
+
 ?>

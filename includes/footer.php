@@ -2,7 +2,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section about">
-                    <h3>EcoTravel</h3>
+                    <h3>TravelXperience</h3>
                     <p>Promoviendo viajes sostenibles y responsables con el medio ambiente desde 2023.</p>
                     <div class="socials">
                         <a href="#"><i class="fab fa-facebook"></i></a>
@@ -22,11 +22,11 @@
                     <h3>Contacto</h3>
                     <p><i class="fas fa-map-marker-alt"></i> Calle Verde 123, Ciudad</p>
                     <p><i class="fas fa-phone"></i> +123 456 7890</p>
-                    <p><i class="fas fa-envelope"></i> info@ecotravel.com</p>
+                    <p><i class="fas fa-envelope"></i> info@travelxperience.com</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; <?php echo date('Y'); ?> EcoTravel. Todos los derechos reservados.</p>
+                <p>&copy; <?php echo date('Y'); ?> TravelXperience. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>

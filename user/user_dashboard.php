@@ -1,5 +1,6 @@
 <?php
 require_once '../config.php';
+require_once '../includes/db.php';
 require_once '../includes/functions.php';
 require_once '../includes/header.php';
 
@@ -16,8 +17,6 @@ $reservas = getFeaturedReservations($user_id);
 <section class="dashboard-section">
     <div class="container">
         <h2>Bienvenido, <?php echo htmlspecialchars($_SESSION['user']['nombre']); ?></h2>
-        
-        <h2>Bienvenido, <?php echo htmlspecialchars($_SESSION['user']['id_usuario']); ?></h2>
         
         <div class="dashboard-grid">
             <div class="dashboard-sidebar">

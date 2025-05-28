@@ -45,7 +45,7 @@ $featuredTrips = getFeaturedTrips();
         <div class="about-content">
             <div class="about-text">
                 <h2 class="section-title">Nuestra Misión</h2>
-                <p>En EcoTravel nos comprometemos con el turismo sostenible, ofreciendo experiencias que respetan y preservan los entornos naturales mientras apoyamos a las comunidades locales.</p>
+                <p>En TravelXperience nos comprometemos con el turismo sostenible, ofreciendo experiencias que respetan y preservan los entornos naturales mientras apoyamos a las comunidades locales.</p>
                 <p>Cada viaje que organizamos está diseñado para minimizar el impacto ambiental y maximizar la conexión con la naturaleza.</p>
                 <a href="#" class="btn-learn">Conoce Más</a>
             </div>
@@ -56,23 +56,6 @@ $featuredTrips = getFeaturedTrips();
     </div>
 </section>
 
-<section id="contacto" class="contact-section">
-    <div class="container">
-        <h2 class="section-title">Contáctanos</h2>
-        <form class="contact-form">
-            <div class="form-group">
-                <input type="text" placeholder="Nombre" required>
-            </div>
-            <div class="form-group">
-                <input type="email" placeholder="Email" required>
-            </div>
-            <div class="form-group">
-                <textarea placeholder="Mensaje" required></textarea>
-            </div>
-            <button type="submit" class="btn-submit">Enviar Mensaje</button>
-        </form>
-    </div>
-</section>
 
 <?php require_once 'includes/footer.php'; ?>
     

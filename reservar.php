@@ -14,10 +14,19 @@ if (!isset($_GET['id'])) {
     header('Location: ../index.php');
     exit();
 }
-
+$id_usuario = $_SESSION['user']['id_usuario'];
 $viaje_id = intval($_GET['id']);
 
 $viaje = getFeaturedTrip($viaje_id);
+
+if($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $asientos = intval($_POST['cantidad_asientos']);
+    $precio = floatval($viaje['precio']);
+    $reserva = createReservation($id_usuario,$viaje_id,$asientos);
+    echo "<script>window.location.href = 'user/user_dashboard.php';</script>";
+    exit();
+}
+
 ?>
 
 <!DOCTYPE html>
