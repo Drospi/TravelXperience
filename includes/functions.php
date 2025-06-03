@@ -1,4 +1,14 @@
 <?php
+function getFeaturedUsers() {
+    global $conn;
+    try {
+        $stmt = mysqli_query($conn, "SELECT * FROM Usuario WHERE tipo = 'cliente' ");
+        return $stmt;
+    } catch (Exception $e) {
+        return [];
+    }
+}
+
 
 // Función para obtener viajes destacados
 function getFeaturedTrips() {
@@ -62,6 +72,18 @@ function getFeaturedReservations($id_usuario) {
     }
 }
 
+function getFeaturedReservation($id_reserva) {
+    global $conn;
+    try {
+        $stmt = mysqli_query($conn, "SELECT * FROM reserva JOIN viaje on reserva.id_viaje = viaje.id_viaje WHERE id_reserva = $id_reserva ");
+        $reserva = $stmt->fetch_assoc();
+        $stmt->close();
+        return $reserva;
+    } catch (Exception $e) {
+        return [];
+    }
+}
+
 function getFeaturedReservationsAdmin() {
     global $conn;
     try {
@@ -78,6 +100,16 @@ function createReservation($id_usuario, $id_viaje, $asientos) {
         $stmt = mysqli_query($conn, "INSERT INTO reserva (id_viaje, id_usuario, cantidad_asientos) VALUES ($id_viaje, $id_usuario, $asientos)");
     } catch (Exception $e) {
         return false;
+    }
+}
+
+function getProviders() {
+    global $conn;
+    try {
+        $stmt = mysqli_query($conn, "SELECT * FROM proveedor");
+        return $stmt;
+    } catch (Exception $e) {
+        return [];
     }
 }
 

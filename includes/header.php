@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -22,7 +23,11 @@ session_start();
                     <li><a href="#nosotros">Nosotros</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                     <?php if(isset($_SESSION['user'])): ?>
-                        <li><a href="<?php echo SITE_URL; ?>/user/dashboard.php">Mi Cuenta</a></li>
+                        <?php if($_SESSION['user']['tipo'] == 'administrador'): ?>
+                            <li><a href="<?php echo SITE_URL; ?>/admin/dashboard.php">Panel de Administración</a></li>
+                        <?php elseif($_SESSION['user']['tipo'] == 'cliente'): ?>
+                            <li><a href="<?php echo SITE_URL; ?>/user/user_dashboard.php">Panel de Cliente</a></li>
+                        <?php endif; ?>
                         <li><a href="<?php echo SITE_URL; ?>/logout.php">Cerrar Sesión</a></li>
                     <?php else: ?>
                         <li><a href="<?php echo SITE_URL; ?>/login.php">Iniciar Sesión</a></li>

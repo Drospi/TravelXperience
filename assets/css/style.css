@@ -347,6 +347,16 @@ a {
     resize: vertical;
 }
 
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--gray-light);
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--white);
+    transition: border-color 0.3s ease;
+}
+
 .btn-submit {
     width: 100%;
     padding: 12px;
@@ -418,6 +428,13 @@ a {
 /* Dashboard styles */
 .dashboard-section {
     padding: 100px 0 50px;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
 .dashboard-grid {
