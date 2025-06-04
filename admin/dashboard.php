@@ -78,8 +78,8 @@ $proveedores = getProviders();
                                         <p>Estado: <span class="status-<?php echo strtolower($viaje['estado']); ?>"><?php echo htmlspecialchars($viaje['estado']); ?></span></p>
                                     </div>
                                     <div class="reserva-actions">
-                                        <a href="editar_viaje.php?id=<?php echo $viaje['id_viaje']; ?>" class="btn-details">Editar</a>
-                                        <a href="eliminar_viaje.php?id=<?php echo $reserva['id_viaje']; ?>" class="btn-cancel">Eliminar</a>
+                                        <a href="editar_viaje.php?id_viaje=<?php echo $viaje['id_viaje']; ?>" class="btn-details">Editar</a>
+                                        <a href="eliminar_viaje.php?id_viaje=<?php echo $reserva['id_viaje']; ?>" class="btn-cancel">Eliminar</a>
                                     </div>
                                 </div>
                             <?php endwhile; ?>
@@ -97,7 +97,7 @@ $proveedores = getProviders();
 
                         <h3>Proveedores</h3>
                         <div class="reserva-actions">
-                            <a href="agregar_viaje.php" class="btn-details">Agregar Proveedor</a>
+                            <a href="agregar_proveedor.php" class="btn-details">Agregar Proveedor</a>
                         </div>
                     </div>
 
@@ -111,8 +111,8 @@ $proveedores = getProviders();
                                         <p>Direccion: <?php echo ($proveedor['direccion']); ?> - <?php echo htmlspecialchars($proveedor['telefono']); ?></p>
                                     </div>
                                     <div class="reserva-actions">
-                                        <a href="editar_proveedor.php?id=<?php echo $proveedor['id_proveedor']; ?>" class="btn-details">Editar</a>
-                                        <a href="eliminar_proveedor.php?id=<?php echo $proveedor['id_proveedor']; ?>" class="btn-cancel">Eliminar</a>
+                                        <a href="editar_proveedor.php?id_proveedor=<?php echo $proveedor['id_proveedor']; ?>" class="btn-details">Editar</a>
+                                        <a href="eliminar_proveedor.php?id_proveedor=<?php echo $proveedor['id_proveedor']; ?>" class="btn-cancel">Eliminar</a>
                                     </div>
                                 </div>
                             <?php endwhile; ?>

@@ -3,7 +3,7 @@
 $host = 'localhost';
 $dbname = 'sistema_viajes';
 $username = 'root';
-$password = '';
+$password = 'root';
 
 $conn = mysqli_connect($host, $username, $password, $dbname);
 

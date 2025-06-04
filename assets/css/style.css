@@ -360,6 +360,7 @@ a {
 .btn-submit {
     width: 100%;
     padding: 12px;
+    margin-top: 20px;
     background-color: var(--primary-color);
     color: var(--white);
     border: none;

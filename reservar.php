@@ -47,7 +47,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
         
         .reserva-container {
             max-width: 1200px;
-            margin: 2rem auto;
+            margin: 6rem auto;
             padding: 0 1rem;
         }
         
@@ -279,4 +279,4 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 </body>
 </html>
 
-<?php require_once '../includes/footer.php'; ?>
+<?php require_once './includes/footer.php'; ?>
