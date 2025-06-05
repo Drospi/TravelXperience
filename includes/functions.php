@@ -113,4 +113,16 @@ function getProviders() {
     }
 }
 
+function getProvider($id_proveedor) {
+    global $conn;
+    try {
+        $stmt = mysqli_query($conn, "SELECT * FROM proveedor WHERE id_proveedor = '$id_proveedor' ");
+        $proveedor = $stmt->fetch_assoc();
+        $stmt->close();
+        return $proveedor;
+    } catch (Exception $e) {
+        return [];
+    }
+}
+
 ?>
