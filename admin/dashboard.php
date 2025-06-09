@@ -79,7 +79,7 @@ $proveedores = getProviders();
                                     </div>
                                     <div class="reserva-actions">
                                         <a href="editar_viaje.php?id_viaje=<?php echo $viaje['id_viaje']; ?>" class="btn-details">Editar</a>
-                                        <a href="eliminar_viaje.php?id_viaje=<?php echo $reserva['id_viaje']; ?>" class="btn-cancel">Eliminar</a>
+                                        <a href="eliminar_viaje.php?id_viaje=<?php echo $viaje['id_viaje']; ?>" class="btn-cancel">Eliminar</a>
                                     </div>
                                 </div>
                             <?php endwhile; ?>

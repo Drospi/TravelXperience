@@ -17,10 +17,25 @@ if (!isset($_GET['id_viaje'])) {
 $id_viaje = intval($_GET['id_viaje']);
 
 $viaje = getFeaturedTrip($id_viaje);
+
 $proveedores = getProviders();
 
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
     
+    $id_proveedor = $_POST['id_proveedor'];
+    $origen = $_POST['origen'];
+    $destino = $_POST['destino'];
+    $fecha_salida = $_POST['fecha_salida'];
+    $fecha_llegada = $_POST['fecha_llegada'];
+    $precio = $_POST['precio'];
+
+    $asientos_disponibles = $_POST['asientos_disponibles'];
+    $descripcion = $_POST['descripcion'];
+    $estado = $_POST['estado'];
+
+    mysqli_query($conn, "UPDATE viaje SET id_proveedor = '$id_proveedor', origen = '$origen', destino = '$destino', fecha_salida = '$fecha_salida', fecha_llegada = '$fecha_llegada', asientos_disponibles = '$asientos_disponibles', precio = '$precio', descripcion = '$descripcion', estado = '$estado' WHERE id_viaje = $id_viaje");
+    header('Location: ./dashboard.php');
+    exit();
     
 }
 
@@ -34,7 +49,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <form method="POST">
                 <div class="form-group">
-                    <select id="id_usuario" name="id_usuario" required >
+                    <select id="id_proveedor" name="id_proveedor" required >
             
                         <?php foreach ($proveedores as $proveedor): ?>
                             <?php
@@ -46,7 +61,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 <?php
                             } else {
                                 ?>
-                                <option value="<?php echo htmlspecialchars($proveedor['proveedor']); ?>">
+                                <option value="<?php echo htmlspecialchars($proveedor['id_proveedor']); ?>">
                                     <?php echo htmlspecialchars($proveedor['nombre']); ?>
                                 </option>
                             <?php
